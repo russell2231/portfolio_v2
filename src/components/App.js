@@ -1,10 +1,11 @@
 import Navbar from './navbar/Navbar';
+import Home from './home/Home';
 
 function App() {
 	return (
 		<div>
 			<Navbar />
-			<h1>Russell Rice</h1>
+			<Home />
 
 			<div className='div'></div>
 		</div>

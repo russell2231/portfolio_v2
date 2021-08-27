@@ -1,0 +1,55 @@
+@import '../../design-tokens/variables.scss';
+
+.custom-button {
+	display: inline-flex;
+	justify-content: center;
+	font-size: 1.6rem;
+	font-weight: 600;
+	font-family: $font;
+	padding: 0.8rem 3.4rem;
+	border-radius: 10px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	transition: all 0.3s;
+
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+	}
+
+	&.primary {
+		background-color: #007bff;
+		color: #fff;
+		border: 1px solid #007bff;
+
+		a {
+			color: #fff;
+		}
+
+		&:hover {
+			background-color: darken(#007bff, 20%);
+			border-color: darken(#007bff, 20%);
+		}
+	}
+
+	&.invert {
+		background-color: #fff;
+		border: 1px solid #007bff;
+		color: #007bff;
+
+		a {
+			color: #007bff;
+		}
+
+		&:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,132 @@
+@import '../../design-tokens/variables.scss';
+
+#home {
+	background: url('../../assets/background-image.jpg') no-repeat center/cover;
+	height: 100vh;
+	position: relative;
+
+	.hero {
+		position: absolute;
+		top: 25%;
+		width: 90%;
+		max-width: 1320px;
+		margin: 0 auto;
+		padding: 0 1.2rem;
+
+		@include respond-to(small) {
+			top: 33%;
+			width: 55%;
+		}
+
+		.introduction {
+			font-size: 2rem;
+
+			@include respond-to(small) {
+				font-size: 2.4rem;
+			}
+			@include respond-to(medium) {
+				font-size: 2.8rem;
+			}
+			@include respond-to(large) {
+				font-size: 3.2rem;
+			}
+		}
+
+		h1 {
+			font-size: 5.4rem;
+			margin: 1rem 0;
+			line-height: 1;
+
+			@include respond-to(small) {
+				font-size: 5.8rem;
+			}
+			@include respond-to(medium) {
+				font-size: 6.2rem;
+			}
+			@include respond-to(large) {
+				font-size: 6.6rem;
+			}
+		}
+
+		.title {
+			display: inline-block;
+			font-size: 2.3rem;
+			font-weight: normal;
+			color: #007bff;
+			overflow: hidden;
+			border-right: 2px solid black;
+			margin: 0 auto;
+			white-space: nowrap;
+			letter-spacing: 2px;
+			animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+
+			@include respond-to(small) {
+				font-size: 2.7rem;
+			}
+			@include respond-to(medium) {
+				font-size: 3.1rem;
+			}
+			@include respond-to(large) {
+				font-size: 3.5rem;
+			}
+		}
+
+		.tagline {
+			margin: 0.5rem 0;
+		}
+
+		.hero-links {
+			width: 100%;
+			margin-top: 2.4rem;
+			padding-top: 0.8rem;
+			display: flex;
+			flex-direction: column;
+
+			@include respond-to(small) {
+				display: block;
+			}
+
+			.custom-button {
+				margin-bottom: 1rem;
+
+				.download-icon {
+					margin-left: 0.5rem;
+				}
+
+				@include respond-to(small) {
+					&:first-of-type {
+						margin-right: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Typing Effect
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 257px;
+
+		@include respond-to(medium) {
+			width: 332px;
+		}
+		@include respond-to(large) {
+			width: 369px;
+		}
+	}
+}
+
+// Curser Effect
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: black;
+	}
+}

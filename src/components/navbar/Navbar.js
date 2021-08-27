@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { ReactComponent as Logo } from '../../logo.svg';
 import { FiMenu } from 'react-icons/fi';
@@ -36,24 +37,24 @@ const Navbar = () => {
 	return (
 		<nav className={`nav ${isSticky ? 'sticky' : ''}`}>
 			<div className='container'>
-				<Link to='#'>
+				<AnchorLink href='#home'>
 					<Logo />
-				</Link>
+				</AnchorLink>
 
 				<FiMenu className='menu-toggle' onClick={() => handleToggle()} />
 
 				<ul className={`nav-list ${isOpen ? 'open' : ''}`}>
 					<li className='nav-item'>
-						<Link to='#'>Home</Link>
+						<AnchorLink href='#home'>Home</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<Link to='#skills'>Skills</Link>
+						<AnchorLink href='#skills'>Skills</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<Link to='#projects'>Projects</Link>
+						<AnchorLink href='#projects'>Projects</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<Link to='#contact'>Contact</Link>
+						<AnchorLink href='#contact'>Contact</AnchorLink>
 					</li>
 				</ul>
 

@@ -3,23 +3,18 @@
 .nav {
 	padding: 2rem 0;
 	background: #fff;
-	position: sticky;
+	position: fixed;
+	z-index: 99;
 	top: 0;
+	left: 0;
+	right: 0;
 	transition: box-shadow 0.7s ease;
-
-	@include respond-to(medium) {
-		padding: 3rem 0;
-	}
 
 	&.sticky {
 		box-shadow: 0 10px 33px rgba(#000000, 0.1);
 	}
 
 	.container {
-		width: 90%;
-		max-width: 1320px;
-		margin: 0 auto;
-		padding: 0 1.2rem;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;

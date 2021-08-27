@@ -18,6 +18,17 @@ body {
 	line-height: 1.6;
 }
 
+button {
+	cursor: pointer;
+}
+
+.container {
+	width: 90%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 1.2rem;
+}
+
 .div {
 	height: 720px;
 }
