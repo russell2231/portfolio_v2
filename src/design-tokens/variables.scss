@@ -1,0 +1,20 @@
+$font: 'Nunito', sans-serif;
+
+$breakpoints: (
+	'small': 768px,
+	'medium': 1024px,
+	'large': 1440px,
+);
+
+@mixin respond-to($breakpoint) {
+	$value: map-get($breakpoints, $breakpoint);
+
+	@if $value != null {
+		@media screen and (min-width: $value) {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    + "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

@@ -1,0 +1,23 @@
+@import './design-tokens/variables.scss';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+	line-height: 1.6;
+}
+
+.div {
+	height: 720px;
+}
