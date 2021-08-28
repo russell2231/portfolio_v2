@@ -1,0 +1,76 @@
+@import '../../design-tokens/variables.scss';
+
+#skills {
+	padding: 6rem 0;
+
+	h2 {
+		margin: 0;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 600;
+	}
+
+	.skills-grid {
+		padding-top: 6rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		text-align: center;
+		row-gap: 20px;
+		column-gap: 20px;
+		justify-items: center;
+
+		@include respond-to(small) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include respond-to(medium) {
+			row-gap: 40px;
+		}
+
+		.skill-container {
+			box-shadow: -1px 0 10px 0px rgba(#000, 0.07),
+				5px 20px 40px 0 rgba(#000, 0.04);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+
+			@include respond-to(small) {
+				width: 200px;
+				height: 200px;
+			}
+			@include respond-to(medium) {
+				&:hover .skill-title {
+					display: block;
+				}
+			}
+
+			.skill-icon {
+				width: 50px;
+
+				@include respond-to(small) {
+					width: 75px;
+				}
+				@include respond-to(medium) {
+					width: 75px;
+				}
+			}
+
+			.skill-title {
+				margin: 0;
+				margin-top: 1rem;
+				font-size: 1.5rem;
+				font-weight: 600;
+
+				@include respond-to(small) {
+					font-size: 2rem;
+				}
+				@include respond-to(medium) {
+					display: none;
+				}
+			}
+		}
+	}
+}

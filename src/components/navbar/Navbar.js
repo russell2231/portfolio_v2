@@ -48,7 +48,13 @@ const Navbar = () => {
 						<AnchorLink href='#home'>Home</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<AnchorLink href='#skills'>Skills</AnchorLink>
+						<AnchorLink
+							offset='80'
+							href='#skills'
+							onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+						>
+							Skills
+						</AnchorLink>
 					</li>
 					<li className='nav-item'>
 						<AnchorLink href='#projects'>Projects</AnchorLink>
