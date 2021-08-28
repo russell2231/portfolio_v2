@@ -57,7 +57,13 @@ const Navbar = () => {
 						</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<AnchorLink href='#projects'>Projects</AnchorLink>
+						<AnchorLink
+							offset='80'
+							href='#projects'
+							onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+						>
+							Projects
+						</AnchorLink>
 					</li>
 					<li className='nav-item'>
 						<AnchorLink href='#contact'>Contact</AnchorLink>

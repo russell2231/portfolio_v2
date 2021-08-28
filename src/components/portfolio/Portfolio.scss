@@ -1,0 +1,57 @@
+@import '../../design-tokens/variables.scss';
+
+#projects {
+	background: #f8f9fa;
+	padding: 6rem 0;
+
+	h2 {
+		margin: 0;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 600;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+		margin-top: 6rem;
+
+		@include respond-to(small) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 20px;
+		}
+		@include respond-to(large) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.project-container {
+			border-radius: 10px;
+			box-shadow: -1px 0 10px 0px rgba(#000, 0.07),
+				5px 20px 40px 0 rgba(#000, 0.04);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 4rem;
+			text-align: center;
+			background: #fff;
+
+			.project-image {
+				width: 100%;
+				border-radius: 10px 10px 0 0;
+				border-bottom: 1px solid rgba(#777, 0.1);
+			}
+
+			.project-title {
+				margin-bottom: 1rem;
+				letter-spacing: 0.5px;
+			}
+
+			.project-tagline {
+				padding: 0 1rem;
+				margin-top: 0;
+			}
+		}
+	}
+}
