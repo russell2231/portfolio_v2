@@ -62,6 +62,7 @@ const Contact = () => {
 				</div>
 
 				<form
+					action=''
 					name='contact'
 					method='POST'
 					data-netlify='true'
@@ -75,6 +76,7 @@ const Contact = () => {
 							value={inputs.name}
 							placeholder='Name :'
 							onChange={handleChange}
+							required
 						/>
 						<FormInput
 							type='email'
@@ -82,6 +84,7 @@ const Contact = () => {
 							value={inputs.email}
 							placeholder='Your email :'
 							onChange={handleChange}
+							required
 						/>
 						<FormInput
 							type='text'
@@ -89,6 +92,7 @@ const Contact = () => {
 							value={inputs.subject}
 							placeholder='Your subject :'
 							onChange={handleChange}
+							required
 						/>
 					</div>
 
@@ -98,6 +102,7 @@ const Contact = () => {
 							value={inputs.message}
 							placeholder='Your Message :'
 							onChange={handleChange}
+							required
 						></textarea>
 					</div>
 
