@@ -61,7 +61,13 @@ const Contact = () => {
 					</div>
 				</div>
 
-				<form id='contact-form' onSubmit={handleSubmit}>
+				<form
+					name='contact'
+					method='POST'
+					data-netlify='true'
+					id='contact-form'
+					onSubmit={handleSubmit}
+				>
 					<div className='form-group'>
 						<FormInput
 							type='text'
