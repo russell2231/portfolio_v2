@@ -18,6 +18,14 @@ const INITIAL_STATE = {
 const Contact = () => {
 	const [inputs, setInputs] = useState(INITIAL_STATE);
 
+	const encode = (data) => {
+		return Object.keys(data)
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+			)
+			.join('&');
+	};
+
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 
@@ -25,9 +33,18 @@ const Contact = () => {
 	};
 
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({ 'form-name': 'contact', ...inputs }),
+		})
+			.then(() => {
+				alert('Success!');
+				setInputs(INITIAL_STATE);
+			})
+			.catch((error) => alert(error));
 
-		setInputs(INITIAL_STATE);
+		e.preventDefault();
 	};
 
 	return (
@@ -69,7 +86,6 @@ const Contact = () => {
 					data-netlify='true'
 					onSubmit={handleSubmit}
 				>
-					<input type='hidden' name='form-name' value='contact' />
 					<div className='form-group'>
 						<FormInput
 							type='text'
