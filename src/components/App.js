@@ -2,6 +2,7 @@ import Navbar from './navbar/Navbar';
 import Home from './home/Home';
 import Skills from './skills/Skills';
 import Portfolio from './portfolio/Portfolio';
+import Contact from './contact/Contact';
 
 function App() {
 	return (
@@ -10,7 +11,7 @@ function App() {
 			<Home />
 			<Skills />
 			<Portfolio />
-			<div className='div'></div>
+			<Contact />
 		</div>
 	);
 }

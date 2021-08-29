@@ -37,7 +37,10 @@ const Navbar = () => {
 	return (
 		<nav className={`nav ${isSticky ? 'sticky' : ''}`}>
 			<div className='container'>
-				<AnchorLink href='#home'>
+				<AnchorLink
+					href='#home'
+					onClick={() => (window.innerWidth < 1024 ? setIsOpen(false) : '')}
+				>
 					<Logo />
 				</AnchorLink>
 
@@ -45,7 +48,12 @@ const Navbar = () => {
 
 				<ul className={`nav-list ${isOpen ? 'open' : ''}`}>
 					<li className='nav-item'>
-						<AnchorLink href='#home'>Home</AnchorLink>
+						<AnchorLink
+							href='#home'
+							onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+						>
+							Home
+						</AnchorLink>
 					</li>
 					<li className='nav-item'>
 						<AnchorLink
@@ -66,15 +74,29 @@ const Navbar = () => {
 						</AnchorLink>
 					</li>
 					<li className='nav-item'>
-						<AnchorLink href='#contact'>Contact</AnchorLink>
+						<AnchorLink
+							offset='80'
+							href='#contact'
+							onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+						>
+							Contact
+						</AnchorLink>
 					</li>
 				</ul>
 
 				<div className={`socials ${isOpen ? 'open' : ''}`}>
-					<Link to='https://github.com/russell2231' target='_blank'>
+					<Link
+						to={{ pathname: 'https://github.com/russell2231' }}
+						target='_blank'
+						onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+					>
 						<FaGithub className='social-icon' />
 					</Link>
-					<Link to='https://www.linkedin.com/in/russell2231/' target='_blank'>
+					<Link
+						to={{ pathname: 'https://www.linkedin.com/in/russell2231/' }}
+						target='_blank'
+						onClick={() => (window.innerWidth < 1024 ? handleToggle() : '')}
+					>
 						<FaLinkedin className='social-icon' />
 					</Link>
 				</div>

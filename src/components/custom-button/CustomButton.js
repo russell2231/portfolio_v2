@@ -6,6 +6,7 @@ const CustomButton = ({ children, primary, invert, ...otherProps }) => {
 			className={`${primary ? 'primary' : ''} ${
 				invert ? 'invert' : ''
 			} custom-button`}
+			{...otherProps}
 		>
 			{children}
 		</button>
