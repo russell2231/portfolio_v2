@@ -69,6 +69,7 @@ const Contact = () => {
 					id='contact-form'
 					onSubmit={handleSubmit}
 				>
+					<input type='hidden' name='form-name' value='contact' />
 					<div className='form-group'>
 						<FormInput
 							type='text'
