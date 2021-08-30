@@ -69,16 +69,12 @@ const Portfolio = () => {
 							<h3 className='project-title'>{project.name}</h3>
 							<p className='project-tagline'>{project.tagline}</p>
 							<div className='project-links'>
-								<CustomButton primary>
-									<Link to={{ pathname: project.live }} target='_blank'>
-										See Demo
-									</Link>
-								</CustomButton>
-								<CustomButton invert>
-									<Link to={{ pathname: project.github }} target='_blank'>
-										See Code
-									</Link>
-								</CustomButton>
+								<Link to={{ pathname: project.live }} target='_blank'>
+									<CustomButton primary>Live Demo</CustomButton>
+								</Link>
+								<Link to={{ pathname: project.github }} target='_blank'>
+									<CustomButton invert>See Code</CustomButton>
+								</Link>
 							</div>
 						</div>
 					))}

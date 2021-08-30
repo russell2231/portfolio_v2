@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
@@ -39,7 +38,7 @@ const Contact = () => {
 			body: encode({ 'form-name': 'contact', ...inputs }),
 		})
 			.then(() => {
-				alert('Success!');
+				alert('Message sent! I will contact you as soon as I can.');
 				setInputs(INITIAL_STATE);
 			})
 			.catch((error) => alert(error));
@@ -64,17 +63,13 @@ const Contact = () => {
 						<p className='info-tagline'>
 							I can be reached by phone from 8am-8pm EST Monday thru Friday
 						</p>
-						<Link to='tel:513-237-7953' className='info'>
-							(513)-237-7953
-						</Link>
+						<span className='info'>(513)-237-7953</span>
 					</div>
 					<div className='info-container'>
 						<FiMail className='info-icon' />
 						<h3 className='info-name'>Email</h3>
 						<p className='info-tagline'>I can be reached by email anytime</p>
-						<Link to='mailto:russellrice15@gmail.com' className='info'>
-							russellrice15@gmail.com
-						</Link>
+						<span className='info'>russellrice15@gmail.com</span>
 					</div>
 				</div>
 

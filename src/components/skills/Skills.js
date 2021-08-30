@@ -1,6 +1,7 @@
 import htmlIcon from '../../assets/html5.svg';
 import cssIcon from '../../assets/css3.svg';
 import javascriptIcon from '../../assets/javascript.svg';
+import jqueryIcon from '../../assets/jquery.svg';
 import reactIcon from '../../assets/react.svg';
 import sassIcon from '../../assets/sass.svg';
 import bootstrapIcon from '../../assets/bootstrap.svg';
@@ -13,6 +14,7 @@ const Skills = () => {
 		{ name: 'HTML', icon: htmlIcon },
 		{ name: 'CSS', icon: cssIcon },
 		{ name: 'JavaScript', icon: javascriptIcon },
+		{ name: 'jQuery', icon: jqueryIcon },
 		{ name: 'React', icon: reactIcon },
 		{ name: 'SASS', icon: sassIcon },
 		{ name: 'Bootstrap', icon: bootstrapIcon },
