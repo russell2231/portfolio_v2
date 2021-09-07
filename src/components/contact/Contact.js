@@ -63,13 +63,17 @@ const Contact = () => {
 						<p className='info-tagline'>
 							I can be reached by phone from 8am-8pm EST Monday thru Friday
 						</p>
-						<span className='info'>(513)-237-7953</span>
+						<a href='tel:513-237-7953' className='info'>
+							(513)-237-7953
+						</a>
 					</div>
 					<div className='info-container'>
 						<FiMail className='info-icon' />
 						<h3 className='info-name'>Email</h3>
 						<p className='info-tagline'>I can be reached by email anytime</p>
-						<span className='info'>russellrice15@gmail.com</span>
+						<a href='mailto:russellrice15@gmail.com' className='info'>
+							russellrice15@gmail.com
+						</a>
 					</div>
 				</div>
 
