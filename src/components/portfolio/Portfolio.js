@@ -5,14 +5,21 @@ import CustomButton from '../custom-button/CustomButton';
 import audiophile from '../../assets/portfolio-audiophile@2x.jpg';
 import dine from '../../assets/portfolio-dine@2x.jpg';
 import photosnap from '../../assets/portfolio-photosnap@2x.jpg';
-import todo from '../../assets/portfolio-todo@2x.jpg';
 import clipboard from '../../assets/portfolio-clipboard@2x.jpg';
 import designo from '../../assets/portfolio-designo@2x.jpg';
+import invoice from '../../assets/portfolio-invoice-app@2x.jpg';
 
 import './Portfolio.scss';
 
 const Portfolio = () => {
 	const projects = [
+		{
+			name: 'Invoice App',
+			image: invoice,
+			tagline: 'An invoicing web application',
+			live: 'https://invoiceapp-rr3.netlify.app/',
+			github: 'https://github.com/russell2231/invoice-app_v2',
+		},
 		{
 			name: 'Audiophile',
 			image: audiophile,
@@ -40,13 +47,6 @@ const Portfolio = () => {
 			tagline: 'A multi-page website for a digital brand',
 			live: 'https://designo-rr3.netlify.app',
 			github: 'https://github.com/russell2231/designo',
-		},
-		{
-			name: 'Todo',
-			image: todo,
-			tagline: 'A todo website',
-			live: 'https://todo-rr3.netlify.app',
-			github: 'https://github.com/russell2231/todo-app',
 		},
 		{
 			name: 'Clipboard',
