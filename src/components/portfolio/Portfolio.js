@@ -6,7 +6,7 @@ import audiophile from '../../assets/portfolio-audiophile@2x.jpg';
 import dine from '../../assets/portfolio-dine@2x.jpg';
 import photosnap from '../../assets/portfolio-photosnap@2x.jpg';
 import clipboard from '../../assets/portfolio-clipboard@2x.jpg';
-import designo from '../../assets/portfolio-designo@2x.jpg';
+import payapi from '../../assets/portfolio-payapi@2x.jpg';
 import invoice from '../../assets/portfolio-invoice-app@2x.jpg';
 
 import './Portfolio.scss';
@@ -42,11 +42,11 @@ const Portfolio = () => {
 			github: 'https://github.com/russell2231/dine-restaurant',
 		},
 		{
-			name: 'Designo',
-			image: designo,
-			tagline: 'A multi-page website for a digital brand',
-			live: 'https://designo-rr3.netlify.app',
-			github: 'https://github.com/russell2231/designo',
+			name: 'PayAPI',
+			image: payapi,
+			tagline: 'A multi-page API marketing website',
+			live: 'https://payapi-rr3.netlify.app/',
+			github: 'https://github.com/russell2231/payAPI',
 		},
 		{
 			name: 'Clipboard',
