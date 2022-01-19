@@ -16,8 +16,9 @@ const Home = () => {
 					<h1>Russell Rice</h1>
 					<h2 className='title'>Front-End Developer</h2>
 					<p className='tagline'>
-						I'm a self-taught Front-End Developer with 2 years of experience
-						writing responsive, clean, and accessible websites.
+						Front-end developer with experience in building responsive, and
+						accessible websites. Passionate about developing, and testing
+						web-based applications.
 					</p>
 					<div className='hero-links'>
 						<CustomButton primary>
